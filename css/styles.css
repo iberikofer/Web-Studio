@@ -361,7 +361,7 @@ button {
 
 /* Portfolio */
 
-.button-list {
+/* .button-list {
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -475,7 +475,7 @@ button {
 .photo-text {
   line-height: 1.5;
   color: var(--slate);
-}
+} */
 
 /*End of Portfolio*/
 
