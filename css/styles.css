@@ -56,6 +56,7 @@ button {
 
 /*Mobile*/
 .align-container {
+  max-width: 428px;
   margin: 0 auto;
 }
 
@@ -934,7 +935,6 @@ footer {
   right: 0;
   display: flex;
   flex-direction: column;
-  max-width: 428px;
   width: 100%;
   height: 100%;
   padding: 80px 40px 40px;
@@ -1026,16 +1026,20 @@ footer {
 
 /*Tablet*/
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .menu-toggle,
   .menu-container {
     display: none;
   }
+
+  .align-container {
+    max-width: 768px;
+  }
+
   /*Studio*/
 
   .reversed-footer {
     display: flex;
-    justify-content: center;
     justify-content: space-between;
   }
 
@@ -1043,6 +1047,10 @@ footer {
     padding: 24px 0px 24px 16px;
     display: flex;
     align-items: center;
+  }
+
+  .navigation {
+    gap: 76px;
   }
 
   .navigation-list {
@@ -1170,6 +1178,14 @@ footer {
     align-items: flex-start;
   }
 
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
   .team-cards-list {
     justify-content: center;
     flex-direction: row;
@@ -1232,7 +1248,7 @@ footer {
   }
 
   .align-container {
-    width: 1158px;
+    max-width: 1158px;
   }
 
   /*Studio*/
@@ -1263,7 +1279,7 @@ footer {
   }
 
   .logo-align {
-    padding: 0px 0px;
+    padding: 0px 76px 0px 0px;
   }
 
   .page {
