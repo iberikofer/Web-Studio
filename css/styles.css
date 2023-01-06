@@ -1270,6 +1270,7 @@ footer {
   .reversed-footer {
     display: flex;
     justify-content: space-between;
+    gap: 332px;
   }
 
   .navigation-list {
