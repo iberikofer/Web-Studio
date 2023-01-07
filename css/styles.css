@@ -68,13 +68,10 @@ button {
 
 .navigation {
   display: flex;
-  /* position: relative;
-  padding: 24px 0px 24px 16px; */
 }
 
 .navigation-block {
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--shadow);
 }
 
 .navigation-list,
@@ -355,121 +352,7 @@ button {
 
 /* Portfolio */
 
-/* .button-list {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  margin-bottom: 72px;
-  justify-content: center;
-}
-
-.filter-button {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--iris);
-  background-color: var(--cloud);
-  border: 1px solid var(--cornflower);
-  border-radius: 4px;
-  padding: 12px 24px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filter-button:hover {
-  color: var(--cloud);
-  background-color: var(--iris);
-  border: 1px solid var(--iris);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.filter-button:active,
-.filter-button:focus {
-  color: var(--cornflower);
-  background-color: var(--ocean);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card:hover {
-  box-shadow: var(--shadow);
-}
-
-.link-card {
-  color: inherit;
-}
-
-.link-card:hover .overlay,
-.link-card:focus .overlay {
-  transform: translateY(-100%);
-  opacity: 1;
-}
-
-.overlay {
-  width: 360px;
-  height: 300px;
-  background-color: var(--iris);
-  overflow: hidden;
-  position: absolute;
-  transform: translateY(100%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  justify-content: center;
-  padding: 40px 32px 164px;
-}
-
-.overlay-content {
-  width: 296px;
-  height: 96px;
-  color: var(--cloud);
-  font-family: "Roboto";
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.photo-list {
-  display: flex;
-  gap: 48px 24px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.card-photo {
-  position: relative;
-  overflow: hidden;
-}
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  padding: 32px 0px 32px 16px;
-  gap: 8px;
-  border-bottom: 0.5px solid #f4f4fd;
-}
-
-.photo-heading {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.photo-text {
-  line-height: 1.5;
-  color: var(--slate);
-} */
+/* . */
 
 /*End of Portfolio*/
 
@@ -1440,6 +1323,10 @@ footer {
 
   /* Portfolio */
 
+  .navigation {
+    gap: 76px;
+  }
+
   .button-list {
     display: flex;
     flex-direction: row;
@@ -1594,34 +1481,5 @@ footer {
   .email-input-align {
     padding: 0px 0px;
   }
-
-  /* Modal Window
-
-  .modal {
-    width: 90%;
-    max-width: 408px;
-    top: 50%;
-    left: 50%;
-    padding: 72px 24px 24px;
-    display: flex;
-    flex-direction: column;
-    transform: translate(-50%, -50%);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 1;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    background-color: #fcfcfc;
-    border-radius: 4px;
-  }
-
-  .input-label input {
-    width: 360px;
-    height: 40px;
-    padding: 11px 0px 11px 38px;
-    border-radius: 4px;
-    outline: 1px solid rgba(33, 33, 33, 0.2);
-    border: transparent;
-  } */
 }
 /*End of Desktop*/
