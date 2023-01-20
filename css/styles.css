@@ -1118,12 +1118,12 @@ footer {
   .email-input {
     min-width: 264px;
   }
-
   /*End of Studio*/
 }
 /*End of Tablet*/
 
 /*Desktop*/
+
 @media screen and (min-width: 1200px) {
   .menu-toggle,
   .menu-container {
