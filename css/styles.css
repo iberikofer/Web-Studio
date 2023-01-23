@@ -1140,10 +1140,6 @@ footer {
     padding: 120px 0px;
   }
 
-  .navigation {
-    padding: 24px 0px;
-  }
-
   .navigation-block {
     display: flex;
     align-items: center;
@@ -1153,17 +1149,13 @@ footer {
   .reversed-footer {
     display: flex;
     justify-content: space-between;
-    gap: 332px;
+    gap: 258px;
   }
 
   .navigation-list {
     display: flex;
     gap: 40px;
     align-items: center;
-  }
-
-  .logo-align {
-    padding: 0px 76px 0px 0px;
   }
 
   .page {
@@ -1213,8 +1205,8 @@ footer {
 
   .contacts {
     display: flex;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
   }
 
   .contact {
