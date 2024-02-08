@@ -25,8 +25,8 @@
     <title>Studio</title>
   </head>
   <body>
-    <header class="navigation-block">
-      <div class="align-container header-content zero-padding">
+    <header>
+      <div class="align-container header-content">
         <nav class="navigation">
           <div class="logo-align">
             <a href="index.html" class="logo"> <span class="logo-colored">WEB</span>STUDIO</a>
@@ -48,9 +48,6 @@
             </li>
             <li>
               <a href="portfolio.html" class="page">Portfolio</a>
-            </li>
-            <li>
-              <a href="#" class="page">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -77,15 +74,15 @@
       </div>
     </header>
     <main>
-      <section class="head-hero section">
+      <section class="head-hero">
         <div class="align-container hero-container">
           <h1 class="main-heading">Effective Solutions For Your Business</h1>
           <button type="button" class="hero-button" data-modal-open>Order Service</button>
         </div>
       </section>
-      <section class="features section">
+      <section class="features">
         <div class="align-container">
-          <ul class="feature-list">
+          <ul class="features-list">
             <li>
               <div class="icon-align">
                 <svg class="feature-icon">
@@ -137,7 +134,7 @@
           </ul>
         </div>
       </section>
-      <section class="team-goals section">
+      <section class="team-goals">
         <div class="align-container team-container">
           <h2 class="second-heading">What Are We Doing</h2>
           <ul class="goals-list">
@@ -171,7 +168,7 @@
           </ul>
         </div>
       </section>
-      <section class="team-reveal section">
+      <section class="team-members">
         <div class="align-container team-container">
           <h2 class="second-heading">Our Team</h2>
           <ul class="team-cards-list">
@@ -346,7 +343,7 @@
           </ul>
         </div>
       </section>
-      <section class="customers-section section align-container">
+      <section class="customers-section align-container">
         <h2 class="second-heading">Customers</h2>
         <ul class="customers-list">
           <li>
@@ -394,7 +391,7 @@
         </ul>
       </section>
     </main>
-    <footer class="reversed-header">
+    <footer>
       <div class="align-container footer-content">
         <div class="footer-title">
           <a href="index.html" class="logo-footer"><span class="logo-colored">WEB</span>STUDIO</a>
@@ -513,13 +510,10 @@
       </button>
       <ul class="burger-menu-navigation">
         <li>
-          <a href="index.html" class="burger-nav-link">Studio</a>
+          <a href="index.html" class="burger-nav-link burger-current-page">Studio</a>
         </li>
         <li>
           <a href="portfolio.html" class="burger-nav-link">Portfolio</a>
-        </li>
-        <li>
-          <a href="#" class="burger-nav-link">Contacts</a>
         </li>
       </ul>
       <ul class="burger-menu-contacts">
@@ -563,5 +557,6 @@
     </div>
     <script src="./js/modal.js"></script>
     <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/stickyNavigationHandler.js"></script>
   </body>
 </html>

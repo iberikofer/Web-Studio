@@ -62,7 +62,7 @@ button {
 
 /*Studio*/
 
-.section {
+.portfolio {
 	padding: 96px 0px;
 }
 
@@ -71,13 +71,57 @@ button {
 	position: relative;
 }
 
-.navigation-block {
+header {
 	box-shadow: var(--shadow);
+	background-color: var(--white);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-list,
 .contacts {
 	display: none;
+}
+
+.button-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 24px;
+	justify-content: center;
+	margin: 0 auto 48px auto;
+	width: 320px;
+}
+
+.filter-button {
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+	color: var(--iris);
+	background-color: var(--cloud);
+	border: 1px solid var(--cornflower);
+	border-radius: 4px;
+	padding: 12px 24px;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-button:hover {
+	color: var(--cloud);
+	background-color: var(--iris);
+	border: 1px solid var(--iris);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter-button:active,
+.filter-button:focus {
+	color: var(--cornflower);
+	background-color: var(--ocean);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .logo-align {
@@ -132,6 +176,83 @@ button {
 	fill: var(--navy-blue);
 }
 
+.card {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+	box-shadow: var(--shadow);
+}
+
+.link-card {
+	color: inherit;
+}
+
+.link-card:hover .overlay,
+.link-card:focus .overlay {
+	transform: translateY(-100%);
+	opacity: 1;
+}
+
+.overlay {
+	width: 360px;
+	height: 300px;
+	background-color: var(--iris);
+	overflow: hidden;
+	position: absolute;
+	transform: translateY(100%);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	display: flex;
+	justify-content: center;
+	padding: 40px 32px 164px;
+}
+
+.overlay-content {
+	width: 296px;
+	height: 96px;
+	color: var(--cloud);
+	font-family: 'Roboto';
+	font-style: normal;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+}
+
+.photo-list {
+	display: flex;
+	gap: 48px 24px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card-photo {
+	position: relative;
+	overflow: hidden;
+}
+
+.about-text {
+	display: flex;
+	flex-direction: column;
+	padding: 32px 0px 32px 16px;
+	gap: 8px;
+	border-bottom: 0.5px solid #f4f4fd;
+}
+
+.photo-heading {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.photo-text {
+	line-height: 1.5;
+	color: var(--slate);
+}
+
 .head-hero {
 	margin: 0 auto;
 	width: 100%;
@@ -160,6 +281,7 @@ button {
 	flex-direction: column;
 	align-items: center;
 	gap: 72px;
+	overflow: hidden;
 }
 
 .main-heading {
@@ -168,7 +290,7 @@ button {
 	font-weight: 700;
 	line-height: 1.11;
 	width: 318px;
-	letter-spacing: 0.02em;
+	text-align: center;
 }
 
 .hero-button {
@@ -196,14 +318,18 @@ button {
 	box-shadow: var(--shadow);
 }
 
-.feature-list {
+.features {
+	padding: 96px 0px;
+}
+
+.features-list {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 72px;
 }
 
-.feature-list li {
+.features-list li {
 	display: flex;
 	gap: 8px;
 	flex-direction: column;
@@ -232,11 +358,12 @@ button {
 	display: none;
 }
 
-.team-reveal {
+.team-members {
 	background-color: var(--cloud);
+	padding: 96px 0px;
 }
 
-.team-reveal,
+.team-members,
 .team-cards-list {
 	display: flex;
 	flex-direction: column;
@@ -250,6 +377,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	gap: 72px;
+
 }
 
 .second-heading {
@@ -319,6 +447,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	gap: 72px;
+	padding: 96px 0px;
 }
 
 .customers-list {
@@ -404,7 +533,7 @@ footer {
 .footer-sm-list>li {
 	width: 40px;
 	height: 40px;
-	background: rgba(255, 255, 255, 0.1);
+	background: var(--iris);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -537,7 +666,7 @@ footer {
 
 /*End of Footer*/
 
-/*Mobile modal window*/
+/*Modal window*/
 
 .backdrop {
 	z-index: 3;
@@ -802,7 +931,7 @@ footer {
 	box-shadow: var(--shadow);
 }
 
-/*End of Mobile modal window*/
+/*End of Modal window*/
 
 /*Burger menu*/
 
@@ -865,6 +994,10 @@ footer {
 	color: var(--iris);
 }
 
+.burger-current-page {
+	color: var(--ocean);
+}
+
 .burger-menu-contacts {
 	margin-top: 280px;
 	margin-top: auto;
@@ -875,9 +1008,11 @@ footer {
 .burger-contact-phone {
 	color: var(--slate);
 	font-weight: 600;
-	font-size: 35px;
+	font-size: 20px;
 	line-height: 1.11;
 	letter-spacing: 0.02em;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-contact-email {
@@ -886,6 +1021,13 @@ footer {
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-contact-phone:hover,
+.burger-contact-email:hover {
+	color: var(--iris);
 }
 
 .burger-menu-sm-list {
@@ -907,9 +1049,10 @@ footer {
 
 /*End of Mobile*/
 
+
 /*Tablet*/
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
 
 	.menu-toggle,
 	.menu-container {
@@ -925,7 +1068,6 @@ footer {
 	.header-content {
 		display: flex;
 		justify-content: space-between;
-
 	}
 
 	.logo-align {
@@ -990,8 +1132,9 @@ footer {
 		display: block;
 		position: absolute;
 		left: 0;
-		bottom: -34px;
+		bottom: -33.5px;
 		background-color: var(--iris);
+		cursor: default;
 	}
 
 	.page:active,
@@ -1045,9 +1188,10 @@ footer {
 		line-height: 1.07;
 		font-size: 56px;
 		width: 492px;
+		letter-spacing: 0.02em;
 	}
 
-	.feature-list {
+	.features-list {
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: wrap;
@@ -1058,7 +1202,7 @@ footer {
 		margin: 0 auto;
 	}
 
-	.feature-list li {
+	.features-list li {
 		max-width: 356px;
 		align-items: flex-start;
 	}
@@ -1122,6 +1266,16 @@ footer {
 	}
 
 	/*End of Studio*/
+
+	/* Portfolio */
+	.button-list {
+		width: auto;
+		margin-bottom: 64px;
+	}
+
+	.photo-list {
+		justify-content: flex-start;
+	}
 }
 
 /*End of Tablet*/
@@ -1141,26 +1295,25 @@ footer {
 
 	/*Studio*/
 
-	.section {
+	.portfolio {
 		padding: 120px 0px;
 	}
 
-	.navigation-block {
+	header {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: sticky;
+		top: 0px;
+		z-index: 3;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.header-content {
 		display: flex;
 		justify-content: space-between;
 		gap: 258px;
-		padding: 24px 0px;
-
-	}
-
-	.zero-padding {
-		padding: 0px;
 	}
 
 	.navigation-list {
@@ -1201,8 +1354,9 @@ footer {
 		display: block;
 		position: absolute;
 		left: 0;
-		bottom: -26px;
+		bottom: -26.5px;
 		background-color: var(--iris);
+		cursor: default;
 	}
 
 	.page:active,
@@ -1260,9 +1414,14 @@ footer {
 		line-height: 1.07;
 		font-size: 56px;
 		width: 492px;
+		letter-spacing: 0.02em;
 	}
 
-	.feature-list {
+	.features {
+		padding: 120px 0px;
+	}
+
+	.features-list {
 		flex-direction: row;
 		gap: 24px;
 		justify-content: space-between;
@@ -1278,7 +1437,7 @@ footer {
 		border-radius: 4px;
 	}
 
-	.feature-list li {
+	.features-list li {
 		align-items: flex-start;
 	}
 
@@ -1305,6 +1464,10 @@ footer {
 		padding: 0px 0px 120px;
 	}
 
+	.team-members {
+		padding: 120px 0px;
+	}
+
 	.goals-list {
 		display: flex;
 		gap: 24px;
@@ -1314,6 +1477,10 @@ footer {
 	.team-cards-list {
 		flex-direction: row;
 		justify-content: space-between;
+	}
+
+	.customers-section {
+		padding: 120px 0px;
 	}
 
 	.customers-list {
@@ -1330,120 +1497,12 @@ footer {
 	}
 
 	.button-list {
-		display: flex;
-		flex-direction: row;
-		gap: 24px;
+		width: auto;
 		margin-bottom: 72px;
-		justify-content: center;
-	}
-
-	.filter-button {
-		font-family: inherit;
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 1.5;
-		letter-spacing: 0.04em;
-		color: var(--iris);
-		background-color: var(--cloud);
-		border: 1px solid var(--cornflower);
-		border-radius: 4px;
-		padding: 12px 24px;
-		transition-duration: 250ms;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.filter-button:hover {
-		color: var(--cloud);
-		background-color: var(--iris);
-		border: 1px solid var(--iris);
-		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-			0px 2px 2px rgba(0, 0, 0, 0.12);
-	}
-
-	.filter-button:active,
-	.filter-button:focus {
-		color: var(--cornflower);
-		background-color: var(--ocean);
-		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-			0px 2px 2px rgba(0, 0, 0, 0.12);
-	}
-
-	.card {
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		transition-duration: 250ms;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.card:hover {
-		box-shadow: var(--shadow);
-	}
-
-	.link-card {
-		color: inherit;
-	}
-
-	.link-card:hover .overlay,
-	.link-card:focus .overlay {
-		transform: translateY(-100%);
-		opacity: 1;
-	}
-
-	.overlay {
-		width: 360px;
-		height: 300px;
-		background-color: var(--iris);
-		overflow: hidden;
-		position: absolute;
-		transform: translateY(100%);
-		transition-duration: 250ms;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		display: flex;
-		justify-content: center;
-		padding: 40px 32px 164px;
-	}
-
-	.overlay-content {
-		width: 296px;
-		height: 96px;
-		color: var(--cloud);
-		font-family: 'Roboto';
-		font-style: normal;
-		line-height: 1.5;
-		letter-spacing: 0.02em;
 	}
 
 	.photo-list {
-		display: flex;
-		gap: 48px 24px;
-		flex-wrap: wrap;
 		justify-content: space-between;
-	}
-
-	.card-photo {
-		position: relative;
-		overflow: hidden;
-	}
-
-	.about-text {
-		display: flex;
-		flex-direction: column;
-		padding: 32px 0px 32px 16px;
-
-		gap: 8px;
-		border-bottom: 0.5px solid #f4f4fd;
-	}
-
-	.photo-heading {
-		font-size: 20px;
-		font-weight: 500;
-		line-height: 1.2;
-	}
-
-	.photo-text {
-		line-height: 1.5;
-		color: var(--slate);
 	}
 
 	/* Footer */
