@@ -13,10 +13,16 @@
 	openMenuBtn.addEventListener('click', toggleMenu);
 	closeMenuBtn.addEventListener('click', toggleMenu);
 
-	window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+	const handleMediaChange = (e) => {
 		if (!e.matches) return;
 		mobileMenu.classList.remove('is-open');
 		openMenuBtn.setAttribute('aria-expanded', false);
 		document.body.classList.remove("prevent-body-scroll")
+	};
+
+	window.matchMedia('(min-width: 768px)').addEventListener('change', handleMediaChange);
+
+	window.addEventListener('unload', () => {
+		window.matchMedia('(min-width: 768px)').removeEventListener('change', handleMediaChange);
 	});
 })();
