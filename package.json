@@ -1,0 +1,24 @@
+{
+  "name": "web-studio",
+  "version": "1.0.0",
+  "description": "Modern and responsive multi-page website for a digital agency, built with HTML5, CSS3, and TypeScript",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "typescript",
+    "responsive-design",
+    "web-studio"
+  ],
+  "author": "Yaroslav Sych",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
+
